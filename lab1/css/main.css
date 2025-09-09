@@ -1,0 +1,117 @@
+body{
+    color: whitesmoke;
+    background-color: #00008b;
+    margin: auto;
+}
+
+h1{
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.navButton{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgb(63, 61, 61);
+    color: white;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    font-weight: bold
+}
+
+.navButton:hover{
+    background: black;
+    color: teal;
+    border-color: teal;
+}
+
+.navButton.active{
+    background: teal;
+    color: black;
+    font-weight: bold;
+    border-color: black;
+    transform: scale(1.1);
+}
+
+#flexContainer{
+    background-color: rgb(188, 152, 105);
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.imageProgram {
+    border: 5px color black;
+    object-fit: cover;
+    border: 3px solid black;
+    text-align: center;
+    border-radius: 50px;
+    margin-top: 100px;
+}
+
+#row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.caption{
+    text-align: center;
+}
+
+#footerProgram{
+    color: silver;
+    background-color: black;      
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    border: 2px solid white;
+}
+
+table{
+    border-color: silver;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 100px auto;
+}
+
+th, td {
+    color: black;
+    background-color: white;
+    border: 2px solid silver;
+    padding: 8px;
+    text-align: center;
+}
+
+ul{
+    margin: 20px auto;
+    padding: 0;
+    width: fit-content;
+    text-align: left;
+    font-size: large;
+}
+
+#form{
+    display:flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-style: bold;
+}
+
+h3 {
+    text-align: center;
+    font-style: italic;
+}
