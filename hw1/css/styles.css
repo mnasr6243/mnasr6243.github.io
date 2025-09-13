@@ -1,0 +1,48 @@
+h1{
+    text-align: center;
+    margin: 0 auto;
+    background-color: black;
+    color: cadetblue;
+    padding: 10px;
+    border-radius: 2px;
+    border: 2px solid bisque;
+}
+body{
+    color: teal;
+    background-color: slategray;
+    margin: auto;
+}
+
+.navHud{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.navButton{
+    display: flex;
+    justify-content: center;
+    color: slategray;
+    background-color: black;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid bisque;
+    transition: background 0.3s, transform 0.2s, color 0.3s;
+}
+
+.navButton:hover{
+    transform: scale(1.05);
+    color: bisque;
+    background: black;
+}
+
+.navButton.active{
+    transform: scale(1.1);
+    background: teal;
+    color: black;
+    font-weight: bold;
+    border-color: black;
+}
