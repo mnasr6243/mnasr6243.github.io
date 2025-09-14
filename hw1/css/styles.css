@@ -7,8 +7,14 @@ h1{
     border-radius: 2px;
     border: 2px solid bisque;
 }
+
+h2{
+    padding: 20px;
+    text-align: left;
+}
+
 body{
-    color: teal;
+    color: bisque;
     background-color: slategray;
     margin: auto;
 }
@@ -45,4 +51,25 @@ body{
     color: black;
     font-weight: bold;
     border-color: black;
+}
+
+.imageProgram{
+    border: 5px color bisque;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 50px;
+    margin-top: auto;
+    width: 400px;
+    height: 300px;
+
+}
+
+figcaption{
+    font-weight: bold;
+}
+
+.pTag{
+    padding: 20px;
+    text-align: left;
+    font-size: 12pt;
 }
