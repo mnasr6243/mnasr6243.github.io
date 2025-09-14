@@ -9,14 +9,38 @@ h1{
 }
 
 h2{
-    padding: 20px;
-    text-align: left;
+    text-align: center;
 }
 
-body{
+h3{
+    text-indent: 2%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.listRow{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+ul, li{
+    margin-left: 2rem;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+html, body{
     color: bisque;
     background-color: slategray;
-    margin: auto;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
 }
 
 .navHud{
@@ -53,6 +77,12 @@ body{
     border-color: black;
 }
 
+.graphic{
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 .imageProgram{
     border: 5px color bisque;
     object-fit: cover;
@@ -69,7 +99,22 @@ figcaption{
 }
 
 .pTag{
+    margin: 20px;
     padding: 20px;
     text-align: left;
     font-size: 12pt;
+}
+
+.footer{
+    text-align: center;
+    margin-top: auto;
+    background-color: black;
+    color: cadetblue;
+    padding: 1.2rem;
+    border-radius: 2px;
+    border: 2px solid bisque;
+}
+
+small{
+    text-align: center;
 }
