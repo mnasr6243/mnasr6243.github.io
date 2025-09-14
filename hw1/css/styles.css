@@ -21,15 +21,21 @@ h3{
 .listRow{
     display: flex;
     justify-content: center;
-    /* new CSS property used: align-items: flex-start;*/
+    /* new CSS property used: align-items: flex-start;
+    The align-items property specifies the default alignment for items inside a flexbox or grid container.
+    In a flexbox container, the flexbox items are aligned on the cross axis, which is vertical by default (opposite of flex-direction).*/
     align-items: flex-start;
 }
 
 ul, li{
     margin-left: 2rem;
-    /* new CSS property used: list-style-type: disc;*/
+    /* new CSS property used: list-style-type: disc;
+    The list-style-type specifies the type of list-item marker in a list.*/
     list-style-type: disc;
-    /* new CSS property used: list-style-position: inside;*/
+    /* new CSS property used: list-style-position: inside;
+    The list-style-position property specifies the position of the list-item markers (bullet points).
+    list-style-position: inside; means that the bullet points will be inside the list item. 
+    As it is part of the list item, it will be part of the text and push the text at the start:*/
     list-style-position: inside;
 }
 
