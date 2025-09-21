@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("number.jpeg");
+    background-size: contain;
+    background-position: center;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 2px 5px black;
+}
+
+header {
+    background-color: rgb(162, 193, 224);
+    padding: 20px;
+    border: 2px solid white;
+    box-shadow: 0px 2px 5px black;
+}
+
+#main {
+    background-color: rgb(162, 193, 224);
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0px 2px 5px black;
+}
+
+#stats {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: teal;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: tan;
+    box-shadow: 0px 2px 5px black;
+}
+
+#stats span {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px black;
+}
+
+#guessBtn {
+    background-color: red;
+    color: white;
+    box-shadow: 0px 2px 5px black;
+}
+
+#resetBtn {
+    background-color: blue;
+    color: white;
+    box-shadow: 0px 2px 5px black;
+}
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(162, 193, 224);
+    border: 2px solid white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    box-shadow: 0px 2px 5px black;
+}

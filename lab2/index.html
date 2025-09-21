@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Guess a Number </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Guess the Number!</h1>
+            <h2>Guess a number between 1 and 99 in seven attempts!</h2>
+        </header>
+        <br>
+        <div id="main">
+            Enter a guess: 
+            <input type="text" id="playerGuess" size="5">         
+            <button id="guessBtn"> Guess </button> <br>
+            <button id="resetBtn"> Reset </button> 
+            <div id="feedback"></div>
+            <div> Previous Guesses: <span id="guesses"></span></div>
+            <div id="stats">
+                <p>Attempts Left: <span id="attemptsLeft">7</span></p>
+                <p>Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span></p> 
+            </div>
+        </div>
+    <script src="js/script.js"></script>
+    </body>
+
+    <footer id="footer">
+        <!-- Sources are linked in the footer -->
+        <!-- new html tag used: <small></small>: The <small> tag defines smaller text (like copyright and other side-comments).-->
+        <div><img src="csumb-logo.png" alt="CSUMB logo" width="100" height="50"></div>
+        <small>CST336 Internet Programmng. &copy; 2025 | Guess the Number Game | Built by Mohammed Nasr. All Rights Reserved.<br></small>
+        <small><a href="https://www.proprofs.com/quiz-school/story.php?title=3dq-i-can-guess-the-number-youre-thinking-about-right-now" target="_blank">Image Source</a></small>
+    </footer>
+</html>
