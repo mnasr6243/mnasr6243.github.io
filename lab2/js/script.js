@@ -67,7 +67,7 @@ function checkGuess() {
     } else {
         document.querySelector("#guesses").textContent += guess + " ";
         if (attempts == 7) {
-            feedback.textContent = "Sorry, you lost! The correct number was " + randomNumber + " Click reset to play again";
+            feedback.textContent = "Sorry, you lost! The correct number was " + randomNumber + ". Click reset to play again!";
             feedback.style.color = "red";
             losses++;
             document.querySelector("#losses").textContent = losses;
