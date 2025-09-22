@@ -11,6 +11,7 @@ body {
 }
 
 header {
+    font-family: Arial, sans-serif;
     background-color: rgb(162, 193, 224);
     padding: 20px;
     border: 2px solid white;
@@ -18,16 +19,22 @@ header {
 }
 
 #main {
+    font-family: Arial, sans-serif;
     background-color: rgb(162, 193, 224);
-    margin: 20px auto;
-    padding: 20px;
-    width: 50%;
+    margin: 200px auto;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
     border-radius: 10px;
     border: 2px solid white;
     box-shadow: 0px 2px 5px black;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 #stats {
+    font-family: Arial, sans-serif;
     margin-top: 20px;
     padding: 15px;
     background-color: teal;
@@ -42,11 +49,13 @@ header {
 }
 
 #stats span {
+    font-family: Arial, sans-serif;
     color: darkgreen;
     font-weight: bold;
 }
 
 button {
+    font-family: Arial, sans-serif;
     padding: 8px 16px;
     margin: 5px;
     border-radius: 5px;
@@ -56,18 +65,21 @@ button {
 }
 
 #guessBtn {
+    font-family: Arial, sans-serif;
     background-color: red;
     color: white;
     box-shadow: 0px 2px 5px black;
 }
 
 #resetBtn {
+    font-family: Arial, sans-serif;
     background-color: blue;
     color: white;
     box-shadow: 0px 2px 5px black;
 }
 
 #footer{
+    font-family: Arial, sans-serif;
     position: fixed;
     bottom: 0;
     left: 0;
