@@ -7,7 +7,32 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+        <h1>🪢 Hangman Game 🪢</h1>
+
+        <canvas id="hangmanCanvas" width="200" height="250"></canvas>
+
+        <!-- Main hud for hangman game which displays hidden word, wrong guesses, and letters guessed -->
+        <div id="hangmanGame">
+            <p id="displayWord">Word: </p>
+            <p id="wrongGuesses">Wrong Guesses: </p>
+            <p id="lettersGuessed">Letters Guessed: </p>
+
+            <!-- Takes user input for a letter to guess -->
+            <input type="text" id="letterInput" maxlength="1" placeholder="Enter a letter">
+            <!-- Guessing button -->
+            <button id="guessBtn">Guess Letter</button>
+            
+            <p id="message"></p>
+        </div>
         
+        <!-- Keeps track of game history -->
+        <div id="gameHistory">
+            <h3>Game History</h3>
+            <ul id="gamelist"></ul>
+        </div>
+
+        <!-- Resets Game -->
+        <button id="resetBtn">Play Again</button>
 
     <footer id="footer">
             <!-- Sources are linked in the footer -->
