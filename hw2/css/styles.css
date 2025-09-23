@@ -1,0 +1,73 @@
+h1 {
+    font-weight: bold;
+    color: aquamarine;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, teal, black);
+    padding: 20px;
+}
+
+#hangmanGame, #gameHistory {
+    font-weight: bold;
+    margin: 20px auto;
+    padding: 15px;
+    width: 400px;
+    border-radius: 10px;
+    color: aquamarine;
+    background: linear-gradient(to bottom, teal, black);
+    box-shadow: 0 0 10px black;
+}
+
+#displayWord, #wrongGuesses, #lettersGuessed {
+    font-weight: bold;
+    color: aquamarine;
+    text-align: center;
+}
+
+button{
+    background-color: black;
+    color: slategray;
+    padding: 8px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 50px;
+    box-shadow: 0 0 10px black; 
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, teal, yellow);
+    color: white;
+    box-shadow: 0px 2px 5px white;
+}
+
+#message, #letterInput, #gamelist {
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0px 2px 5px black;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+    background: white;
+    box-shadow: 0px 2px 5px black;
+}
+
+#footer {
+    font-family: Arial, sans-serif;
+    position: relative; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    box-shadow: 0px 2px 5px black;
+    margin-top: 60px;
+    color: aquamarine;
+}
