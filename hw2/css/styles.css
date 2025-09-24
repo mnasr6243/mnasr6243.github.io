@@ -44,10 +44,9 @@ button:hover {
     box-shadow: 0px 2px 5px white;
 }
 
-#message, #letterInput, #gamelist {
+#message, #letterInput, #gameList {
     font-weight: bold;
     margin-top: 15px;
-    box-shadow: 0px 2px 5px black;
 }
 
 canvas {
