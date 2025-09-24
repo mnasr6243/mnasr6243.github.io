@@ -49,6 +49,7 @@ startGame();
 //🎯 start a new game
 function startGame() {
     chosenWord = words[Math.floor(Math.random() * words.length)];
+    console.log(chosenWord);
     displayedWord = Array(chosenWord.length).fill("_");
     wrongGuesses = 0;
     guessedLetters = [];
@@ -60,6 +61,8 @@ function startGame() {
 
     clearCanvas();
     drawStructure();
+
+    statusImage.style.display = "none"; //hide old image
 }
 
 //🔄 Updates the UI
@@ -116,12 +119,19 @@ function addLog(guess) {
 function checkGameOver() {
     if (!displayedWord.includes("_")) {
         messageText.textContent = "🎉 You Won! The word was: " + chosenWord;
-        guessBtn.disabled = true;
-        letterInput.disabled = true;
+        guessBtn.disabled = true; 
+        letterInput.disabled = true; 
+
+        statusImage.src = "images/win.jpg"; //win image
+        statusImage.style.display = "block";
+
     } else if (wrongGuesses >= 6) {
         messageText.textContent = "💀 You Lost! The word was: " + chosenWord + ". Press Play Again to try again";
         guessBtn.disabled = true;
         letterInput.disabled = true;
+
+        statusImage.src = "images/lose.jpg"; //lose image
+        statusImage.style.display = "block";
     }
 }
 

@@ -13,6 +13,7 @@ body {
 #hangmanGame, #gameHistory {
     font-weight: bold;
     margin: 20px auto;
+    text-align: center;
     padding: 15px;
     width: 400px;
     border-radius: 10px;
@@ -47,6 +48,12 @@ button:hover {
 #message, #letterInput, #gameList {
     font-weight: bold;
     margin-top: 15px;
+}
+
+#statusImage {
+    display: none;
+    width: 150px;
+    margin: 0 auto;
 }
 
 canvas {
