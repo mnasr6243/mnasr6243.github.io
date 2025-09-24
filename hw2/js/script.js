@@ -1,24 +1,24 @@
-// Event Listeners
+//👂 Event Listeners
 document.querySelector("#guessBtn").addEventListener("click", makeGuess);
 document.querySelector("#letterInput").addEventListener("keypress", keyEnter);
 document.querySelector("#resetBtn").addEventListener("click", resetGame);
 
 
-//Makes a guess if enter key is pressed
+//🔤 Makes a guess if enter key is pressed
 function keyEnter(event) {
     if (event.key === "Enter") {
         makeGuess();
     }
 }
 
-//Resets the game
+//🔚 Resets the game
 function resetGame() {
     guessBtn.disabled = false;
     letterInput.disabled = false;
     startGame();
 }
 
-//Global variables/words to guess
+//🗺 Global variables/words to guess
 const words = ["lazy", "hangman", "angry", "upset", "game", "browser", "coding", 
                 "apple", "banana", "cherry", "dragonfruit", "elephant", "flamingo", "guitar", "computer", 
                 "island", "jungle", "kangaroo", "laptop", "mountain", "notebook", "ocean", "pyramid", 
@@ -39,11 +39,11 @@ const guessBtn = document.getElementById("guessBtn");
 const resetBtn = document.getElementById("resetBtn");
 const gameList = document.getElementById("gameList");
 
-//canvas setup
+//🧱 canvas setup
 const canvas = document.getElementById("hangmanCanvas");
 const ctx = canvas.getContext("2d");
 
-// Starts the game
+//Starts the game
 startGame();
 
 //🎯 start a new game
@@ -105,7 +105,7 @@ function makeGuess() {
     addLog(guess);
 }
 
-//📜 Add to game history
+//🧾 Add to game history
 function addLog(guess) {
     const li = document.createElement("li");
     li.textContent = `Guessed "${guess}" → ${displayedWord.join(" ")} (wrong: ${wrongGuesses})`;
