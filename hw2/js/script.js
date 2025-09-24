@@ -3,7 +3,6 @@ document.querySelector("#guessBtn").addEventListener("click", makeGuess);
 document.querySelector("#letterInput").addEventListener("keypress", keyEnter);
 document.querySelector("#resetBtn").addEventListener("click", resetGame);
 
-
 //🔤 Makes a guess if enter key is pressed
 function keyEnter(event) {
     if (event.key === "Enter") {
