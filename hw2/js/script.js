@@ -135,8 +135,8 @@ function drawStructure() {
     ctx.beginPath();
     ctx.moveTo(20, 230); ctx.lineTo(180, 230)   //base
     ctx.moveTo(50, 230); ctx.lineTo(50, 20)     //pole
-    ctx.lineTo(130, 20)                          //top beam
-    ctx.lineTo(130, 50)                          //rope
+    ctx.lineTo(130, 20)                         //top beam
+    ctx.lineTo(130, 50)                         //rope
     ctx.stroke();
 }
 
