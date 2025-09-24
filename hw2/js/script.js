@@ -118,7 +118,7 @@ function checkGameOver() {
         messageText.textContent = "🎉 You Won! The word was: " + chosenWord;
         guessBtn.disabled = true;
         letterInput.disabled = true;
-    } else if (wrongGuesses >= (chosenWord.length/2)) {
+    } else if (wrongGuesses >= 6) {
         messageText.textContent = "💀 You Lost! The word was: " + chosenWord + ". Press Play Again to try again";
         guessBtn.disabled = true;
         letterInput.disabled = true;
