@@ -1,0 +1,25 @@
+h1 {
+    font-weight: bold;
+    color: aquamarine;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, teal, black);
+    padding: 20px;
+}
+
+#footer {
+    font-family: Arial, sans-serif;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    box-shadow: 0px 2px 5px black;
+    margin-top: 60px;
+    color: aquamarine;
+}
