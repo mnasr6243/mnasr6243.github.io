@@ -74,3 +74,40 @@ if (q5 === "Hola" || q5 === "hola") {
     showFeedback("feedback5", false);
 }
 
+// Show total score
+const results = document.getElementById("results");
+results.innerHTML = `Your Score: ${score}/100`;
+if (score >= 80) {
+    results.classList.add("congrats");
+    results.innerHTML += "<br> 🎉 Congratulations!";
+} else {
+    results.classList.remove("congrats");
+}
+
+// Times taken (LocalStorage)
+let times = localStorage.getItem("quizTimes") || 0;
+times++;
+localStorage.setItem("quizTimes", times);
+document.getElementById("timesTaken").innerText = `Quiz taken ${times} times.`;
+});
+
+// Feedback helper
+function showFeedback(id, correct) {
+    const elem = document.getElementById(id);
+    elem.innerHTML = correct ? "✅ Correct!" : "❌ Incorrect!";
+    elem.style.color = correct
+    ? 'img src= "correct.jpg" alt="Correct">'
+    : 'img src= "incorrect.jpg" alt="Incorrect">';
+    // elem.style.display = "inline";
+    // setTimeout(() => { elem.style.display = "none"; }, 3000);
+}
+
+function arraysEqual(a, b) {
+    return JSON.stringify(a) === JSON.stringify(b);
+}
+
+// Load times taken
+document.addEventListener("DOMContentLoaded", function() {
+    let time = localStorage.getItem("quizTimes") || 0;
+    document.getElementById("timesTaken").innerText = `Quiz taken ${time} times.`;
+});
