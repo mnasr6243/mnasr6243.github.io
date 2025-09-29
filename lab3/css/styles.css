@@ -77,6 +77,10 @@ button:hover {
     color: green;
 }
 
+#results.try-again {
+    color: darkred;
+}
+
 #timesTaken {
     text-align: center;
     margin-top: 1rem;

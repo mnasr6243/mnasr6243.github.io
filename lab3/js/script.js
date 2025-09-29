@@ -76,12 +76,15 @@ if (q5 === "Hola" || q5 === "hola") {
 
 // Show total score
 const results = document.getElementById("results");
-results.innerHTML = `Your Score: ${score}/100`;
+results.innerHTML = `Your Total Score is: ${score}/100`;
 if (score >= 80) {
+    results.classList.remove("try-again");
     results.classList.add("congrats");
     results.innerHTML += "<br> 🎉 Congratulations!";
 } else {
     results.classList.remove("congrats");
+    results.classList.add("try-again");
+    results.innerHTML += " ❌ <br> Need at least 80/100 to pass. Try again!";
 }
 
 // Times taken (LocalStorage)
