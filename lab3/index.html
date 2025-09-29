@@ -8,67 +8,69 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <h1>JavaScript Quiz</h1>
-    <form id="quizForm">
+    <main>
+        <h1>JavaScript Quiz</h1>
+        <form id="quizForm">
 
-    <!-- Q1: Radio (random order) -->
-     <div class="question">
-        <p>1. Which of the following is a battle royale game?</p>
-        <div id="q1Options"></div>
-        <span class="feedback" id="feedback1"></span>
-     </div>
+        <!-- Q1: Radio (random order) -->
+        <div class="question">
+            <p>1. Which of the following is a battle royale game?</p>
+            <div id="q1Options"></div>
+            <span class="feedback" id="feedback1"></span>
+        </div>
 
-     <!-- Q2: Checkbox -->
-       <div class="question">
-        <p>2. Which of these are loops in JavaScript?</p>
-        <label><input type="checkbox" name="q2" value="for">for</label>
-        <label><input type="checkbox" name="q2" value="while">while</label>
-        <label><input type="checkbox" name="q2" value="if">if</label>
-        <label><input type="checkbox" name="q2" value="do-while">do-while</label>
-        <span class="feedback" id="feedback2"></span>
-     </div>
+        <!-- Q2: Checkbox -->
+        <div class="question">
+            <p>2. Which of these are loops in JavaScript?</p>
+            <label><input type="checkbox" name="q2" value="for">for</label>
+            <label><input type="checkbox" name="q2" value="while">while</label>
+            <label><input type="checkbox" name="q2" value="if">if</label>
+            <label><input type="checkbox" name="q2" value="do-while">do-while</label>
+            <span class="feedback" id="feedback2"></span>
+        </div>
 
-     <!-- Q3: Dropdown -->
-      <div class="question">
-        <p>3. Which HTML tag do we use to include JavaScript</p>
-        <select id="q3">
-            <option value="">Choose an option</option>
-            <option value="script">&lt;script&gt;</option>
-            <option value="js">&lt;js&gt;</option>
-            <option value="link">&lt;link&gt;</option>
-            <option value="style">&lt;style&gt;</option>
-        </select>
-        <span class="feedback" id="feedback3"></span>
-     </div>
+        <!-- Q3: Dropdown -->
+        <div class="question">
+            <p>3. Which HTML tag do we use to include JavaScript</p>
+            <select id="q3">
+                <option value="">Choose an option</option>
+                <option value="script">&lt;script&gt;</option>
+                <option value="js">&lt;js&gt;</option>
+                <option value="link">&lt;link&gt;</option>
+                <option value="style">&lt;style&gt;</option>
+            </select>
+            <span class="feedback" id="feedback3"></span>
+        </div>
 
-     <!-- Q4: Number -->
-       <div class="question">
-        <p>4. What is the sum of 5 + 5?</p>
-        <input type="number" id="q4">
-        <span class="feedback" id="feedback4"></span>
-     </div>
+        <!-- Q4: Number -->
+        <div class="question">
+            <p>4. What is the sum of 5 + 5?</p>
+            <input type="number" id="q4">
+            <span class="feedback" id="feedback4"></span>
+        </div>
 
-     <!-- Q5: Text -->
-       <div class="question">
-        <p>5. How do you say hello in Spanish?</p>
-        <input type="text" id="q5">
-        <span class="feedback" id="feedback5"></span>
-     </div>
+        <!-- Q5: Text -->
+        <div class="question">
+            <p>5. How do you say hello in Spanish?</p>
+            <input type="text" id="q5">
+            <span class="feedback" id="feedback5"></span>
+        </div>
 
-     <button type="submit">Submit Quiz</button>
-     </form>
+        <button type="submit">Submit Quiz</button>
+        </form>
 
-     <div id="results"></div>
-     <div id="timesTaken"></div>
+        <div id="results"></div>
+        <div id="timesTaken"></div>
 
-    <div>
-        <footer id="footer">
-            <!-- Sources are linked in the footer -->
-            <div><img src="images/csumb_logo-1.png" alt="CSUMB logo" width="100" height="50"></div>
-            <small>CST336 Internet Programmng. &copy; 2025 | JS Quiz | Built by Mohammed Nasr. All Rights Reserved.<br></small>
-            <small><a href="https://www.w3schools.com/html/html_emojis.asp" target="_blank">Source 1</a></small>
-            <small><a href="https://www.freepik.com/premium-vector/cross-check-mark-icon-symbol-set_10910052.htm" target="_blank">Source 2</a></small>
-        </footer>
-    </div>
+        <div>
+            <footer id="footer">
+                <!-- Sources are linked in the footer -->
+                <div><img src="images/csumb_logo-1.png" alt="CSUMB logo" width="100" height="50"></div>
+                <small>CST336 Internet Programmng. &copy; 2025 | JS Quiz | Built by Mohammed Nasr. All Rights Reserved.<br></small>
+                <small><a href="https://www.w3schools.com/html/html_emojis.asp" target="_blank">Source 1</a></small>
+                <small><a href="https://www.freepik.com/premium-vector/cross-check-mark-icon-symbol-set_10910052.htm" target="_blank">Source 2</a></small>
+            </footer>
+        </div>
+    </main>
 </body>
 </html>

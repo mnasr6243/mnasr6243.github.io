@@ -30,9 +30,9 @@ document.getElementById("quizForm").addEventListener("submit", function(e) {
 
 // Q1
 const q1Value = document.querySelector('input[name="q1"]:checked');
-if (q1Value && (q1Value.q1Value === "Fortnite" || q1Value.value === "Warzone")) {
+if (q1Value && (q1Value.value === "Fortnite" || q1Value.value === "Warzone")) {
     score += 20;
-    showFeedback("fedback1", true);
+    showFeedback("feedback1", true);
 } else {
     showFeedback("feedback1", false);
 }
@@ -94,12 +94,11 @@ document.getElementById("timesTaken").innerText = `Quiz taken ${times} times.`;
 // Feedback helper
 function showFeedback(id, correct) {
     const elem = document.getElementById(id);
-    elem.innerHTML = correct ? "✅ Correct!" : "❌ Incorrect!";
-    elem.style.color = correct
-    ? 'img src= "correct.jpg" alt="Correct">'
-    : 'img src= "incorrect.jpg" alt="Incorrect">';
-    // elem.style.display = "inline";
-    // setTimeout(() => { elem.style.display = "none"; }, 3000);
+    if (correct) {
+        elem.innerHTML = '<img src="images/correct.jpg" alt="Correct" width="20" height="20"> <span>Correct!</span>';    
+    } else {
+        elem.innerHTML = '<img src="images/incorrect.jpg" alt="Incorrect" width="20" height="20"> <span>Incorrect!</span>';
+    } 
 }
 
 function arraysEqual(a, b) {
