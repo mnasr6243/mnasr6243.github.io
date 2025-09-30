@@ -30,3 +30,12 @@ async function setupStates() {
         console.error("Error loading states:", err);
     }       
 }
+
+// Setup event listeners for ZIP, username, password, form validation
+function setupEvents() {
+    document.querySelector("#zipInput").addEventListener("change", lookupZip);
+    document.querySelector("#state").addEventListener("change", loadCounties);
+    document.querySelector("#username").addEventListener("input", checkUsername);
+    document.querySelector("#password").addEventListener("focus", suggestPassword);
+    document.querySelector("#signupForm").addEventListener("submit", validateForm);
+}
