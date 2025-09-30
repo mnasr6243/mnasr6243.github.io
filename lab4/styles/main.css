@@ -5,6 +5,24 @@ h1{
     text-shadow: 2px 2px 4px black;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, gray, black);
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+fieldset{
+    width: 35%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(to bottom, black, gray);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px black;
+}
+
 footer {
     text-align: center;
     margin-top: 2rem;
