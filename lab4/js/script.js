@@ -39,3 +39,37 @@ function setupEvents() {
     document.querySelector("#password").addEventListener("focus", suggestPassword);
     document.querySelector("#signupForm").addEventListener("submit", validateForm);
 }
+
+// lookup city/lat/lon from ZIP code
+async function lookupZip() {
+    let zip = document.querySelector("#zipInput").value.trim();
+    let cityEl = document.querySelector("#city");
+    let latEl = document.querySelector("#latitude");
+    let lonEl = document.querySelector("#longitude");
+    let msgEl = document.querySelector("#zipMessage");
+
+    cityEl.textContent = "";
+    latEl.textContent = "";
+    lonEl.textContent = "";
+    msgEl.textContent = "";
+
+    if (!zip) return;
+
+    try {
+        let response = await fetch(`https://csumb.space/api/cityInfoAPI.php?zip=${zip}`);
+        if (!response.ok) throw new Error("ZIP API cannot be reached");
+
+        let data = await response.json();
+        if (data.city) {
+            cityEl.textContent = data.city;
+            latEl.textContent = data.latitude;
+            lonEl.textContent = data.longitude;
+        } else {
+            msgEl.textContent = "No data found for that ZIP code: " + zip;
+        }
+
+    } catch (err) {
+        msgEl.textContent = "Error looking up ZIP code";
+        console.error("Zip coder error: ", err);       
+    }
+}
