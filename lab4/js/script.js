@@ -73,3 +73,24 @@ async function lookupZip() {
         console.error("Zip coder error: ", err);       
     }
 }
+
+// Load counties for selected state
+async function loadCounties() {
+    let stateCode = document.querySelector("#state").value;
+    let countySelect = document.querySelector("#county");
+    countySelect.innerHTML = "";
+
+    try {
+        let response = await fetch(`https://csumb.space/api/countyListAPI.php?state=${stateCode}`);
+        if (!response.ok) throw new Error("County API cannot be reached");
+
+        let counties = await response.json();
+        for (let c of counties) {
+            let opt = document.createElement("option");
+            opt.textContent = c.county;
+            countySelect.appendChild(opt);
+        }
+    } catch (err) {
+        console.error("County error: ", err);
+    }
+}
