@@ -1,8 +1,8 @@
 h1{
     text-align: center;
     font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px black;
+    color: black;
+    text-shadow: 2px 2px 4px white;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 legend {
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: b;
     text-shadow: 2px 2px 4px black;
 }
 
@@ -69,8 +69,13 @@ footer {
     box-shadow: 0px -5px 15px black;
 }
 
-#usernameMessage, #zipMessage {
+#zipMessage, .unavailable {
     color: red;
+    font-weight: bold;
+}
+
+.available {
+    color: green;
     font-weight: bold;
 }
 
@@ -79,4 +84,10 @@ footer {
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+#city, #latitude, #longitude {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }

@@ -1,4 +1,4 @@
-// Eventlisteners
+// Wait until page fully loads
 window.addEventListener("DOMContentLoaded", () => {
     setupStates();
     setupEvents();
@@ -9,11 +9,9 @@ async function setupStates() {
     try {
         let statesResponse = await fetch("https://csumb.space/api/allStatesAPI.php");
         if (!statesResponse.ok) throw new Error("State API failed");
-
         let statesData= await statesResponse.json();
-        let statesSelect = document.querySelector("#state");
 
-        // add placeholder
+        let statesSelect = document.querySelector("#state");
         let defaultOpt = document.createElement("option");
         defaultOpt.textContent = "Select State";
         defaultOpt.disabled = true;
@@ -53,23 +51,31 @@ async function lookupZip() {
     lonEl.textContent = "";
     msgEl.textContent = "";
 
-    if (!zip) return;
+    if (zip.length !== 5 || !zip) {
+        msgEl.textContent = "ZIP code must be 5 digits";
+        msgEl.className = "unavailable";
+        return;
+    }
 
     try {
         let response = await fetch(`https://csumb.space/api/cityInfoAPI.php?zip=${zip}`);
         if (!response.ok) throw new Error("ZIP API cannot be reached");
-
         let data = await response.json();
+
         if (data.city) {
             cityEl.textContent = data.city;
             latEl.textContent = data.latitude;
             lonEl.textContent = data.longitude;
+            msgEl.textContent = "ZIP code found";
+            msgEl.className = "available";
         } else {
             msgEl.textContent = "No data found for that ZIP code: " + zip;
+            msgEl.className = "unavailable";
         }
 
     } catch (err) {
         msgEl.textContent = "Error looking up ZIP code";
+        msgEl.className = "unavailable";
         console.error("Zip coder error: ", err);       
     }
 }
@@ -115,10 +121,10 @@ async function checkUsername() {
 
         let data = await response.json();
         if (data.available) {
-            msgEL.textContent = "Username is available";
+            msgEL.textContent = "✅ Username is available";
             msgEL.classList.add("available");
         } else {
-            msgEL.textContent = "Username is taken";
+            msgEL.textContent = "❌ Username is taken";
             msgEL.classList.add("unavailable");
         }
     } catch (err) {
@@ -128,25 +134,23 @@ async function checkUsername() {
 
 // Password suggestion
 async function suggestPassword() {
-    let sugestionEL = document.querySelector("#suggestion");
-    sugestionEL.textContent = "Generating Password Suggestion...";
+    let suggestionEl = document.querySelector("#suggestion");
+    suggestionEl.textContent = "Generating Password Suggestion...";
 
     try {
         let response = await fetch("https://csumb.space/api/suggestedPassword.php?length=8");
         if (!response.ok) throw new Error("Password Suggestion API cannot be reached");
 
         let data = await response.json();
-        sugestionEL.textContent = `Suggested Password: ${data.password}`;
+        suggestionEl.textContent = `Suggested Password: ${data.password}`;
     } catch (err) {
+        suggestionEl.textContent = "Error generating password suggestion";
         console.error("Password suggestion error: ", err);
-        sugestionEL.textContent = "Error generating password suggestion";
     }
 }   
 
 // Form validation
 function validateForm(event) {
-    // event.preventDefault(); // prevent actual form submission for demo purposes
-
     let username = document.querySelector("#username").value.trim();
     let password = document.querySelector("#password").value.trim();
     let confirmPassword = document.querySelector("#confirmPassword").value.trim();
@@ -166,5 +170,5 @@ function validateForm(event) {
         return;
     }
 
-        alert("Form submitted successfully!");
+        alert("✅ Form submitted successfully!");
     }
