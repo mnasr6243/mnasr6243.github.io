@@ -33,7 +33,7 @@ async function setupStates() {
 
 // Setup event listeners for ZIP, username, password, form validation
 function setupEvents() {
-    document.querySelector("#zipInput").addEventListener("change", lookupZip);
+    document.querySelector("#zipInput").addEventListener("input", lookupZip);
     document.querySelector("#state").addEventListener("change", loadCounties);
     document.querySelector("#username").addEventListener("input", checkUsername);
     document.querySelector("#password").addEventListener("focus", suggestPassword);
