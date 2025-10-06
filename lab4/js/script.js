@@ -51,7 +51,7 @@ async function lookupZip() {
     lonEl.textContent = "";
     msgEl.textContent = "";
 
-    if (zip.length !== 5 || isNaNzip) {
+    if (zip.length !== 5 || !zip) {
         msgEl.textContent = "ZIP code must be 5 digits";
         msgEl.className = "unavailable";
         return;
@@ -151,6 +151,8 @@ async function suggestPassword() {
 
 // Form validation
 function validateForm(event) {
+    event.preventDefault(); // Prevent form submission
+    
     let username = document.querySelector("#username").value.trim();
     let password = document.querySelector("#password").value.trim();
     let confirmPassword = document.querySelector("#confirmPassword").value.trim();
