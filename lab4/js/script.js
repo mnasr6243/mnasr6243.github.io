@@ -127,20 +127,21 @@ async function checkUsername() {
 }
 
 // Password suggestion
-function suggestPassword() {
+async function suggestPassword() {
     let sugestionEL = document.querySelector("#suggestion");
-    let randPass = generatePassword(10);
-    sugestionEL.textContent = `Password Suggestion: ${randPass}`;
-}
+    sugestionEL.textContent = "Generating Password Suggestion...";
 
-function generatePassword(length) {
-    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
-    let pass = "";
-    for (let i = 0; i < length; i++) {
-        pass += chars.charAt(Math.floor(Math.random() * chars.length));
+    try {
+        let response = await fetch("https://csumb.space/api/suggestedPassword.php?length=8");
+        if (!response.ok) throw new Error("Password Suggestion API cannot be reached");
+
+        let data = await response.json();
+        sugestionEL.textContent = `Suggested Password: ${data.password}`;
+    } catch (err) {
+        console.error("Password suggestion error: ", err);
+        sugestionEL.textContent = "Error generating password suggestion";
     }
-    return pass;
-}
+}   
 
 // Form validation
 function validateForm(event) {
