@@ -9,34 +9,35 @@
 </head>
 <body>
     <h1>Sign up Form</h1>
+    <form id="signupForm">
+        <fieldset>
+            <legend>Sign Up</legend>
+            First Name: <input id="firstName" type="text"><br><br>
+            Last Name: <input id="lastName" type="text"><br><br>
+            Email: <input id="email" type="text"><br><br>
+            Phone Number: <input id="phone" type="text"><br><br>
 
-    <fieldset>
-    <legend>Sign Up</legend>
-    First Name: <input id="firstName" type="text"><br><br>
-    Last Name: <input id="lastName" type="text"><br><br>
-    Email: <input id="email" type="text"><br><br>
-    Phone Number: <input id="phone" type="text"><br><br>
+            Zip Code: <input id="zipInput" type="text">
+            <span id="zipMessage"></span><br><br>
 
-    Zip Code: <input id="zipInput" type="text"><br><br>
-    <span id="zipMessage"></span><br><br>
+            City: <p id="city"></p><br>
+            Latitude: <p id="latitude"></p><br>
+            Longitude: <p id="longitude"></p><br>
 
-    City: <p id="city"></p><br>
-    Latitude: <p id="latitude"></p><br>
-    Longitude: <p id="longitude"></p><br>
+            State:  <select id="state"></select><br>
+            Select a County: <select id="county"></select><br><br>
 
-    State:  <select id="state"></select><br>
-    Select a County: <select id="county"></select><br><br>
+            Desired Username: <input id="username" type="text"><br><br>
+            <span id="usernameMessage"></span><br><br>
 
-    Desired Username: <input id="username" type="text"><br><br>
-    <span id="usernameMessage"></span><br><br>
+            Password: <input id="password" type="password"><br><br>
+            <div id="suggestion"></div><br><br>
 
-    Password: <input id="password" type="password"><br><br>
-    <div id="suggestion"></div><br><br>
-
-    Type Password Again: <input id="confirmPassword" type="password"><br><br>
-    
-    <input type="submit" value="Sign up!">
-    </fieldset>
+            Type Password Again: <input id="confirmPassword" type="password"><br><br>
+            
+            <input type="submit" value="Sign up!">
+        </fieldset>
+    </form>
     
     <footer id="footer">
         <div><img src="images/csumb_logo-1.png" alt="CSUMB Logo" width="100px" height="50px"></div>
