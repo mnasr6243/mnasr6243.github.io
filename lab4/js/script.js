@@ -69,7 +69,7 @@ async function lookupZip() {
             msgEl.textContent = "ZIP code found";
             msgEl.className = "available";
         } else {
-            msgEl.textContent = "Zip code not found: " + zip;
+            msgEl.textContent = "Zip code not found";
             msgEl.className = "unavailable";
         }
 

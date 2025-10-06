@@ -79,6 +79,17 @@ footer {
     font-weight: bold;
 }
 
+#zipInput {
+    display: inline;
+    font-weight: bold;
+}
+
+#zipMessage {
+    display: inline;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
 #suggestion {
     color: yellow;
     font-weight: bold;
