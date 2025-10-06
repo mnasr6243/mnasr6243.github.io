@@ -33,6 +33,7 @@ fieldset{
 fieldset input, fieldset select, p, span, div {
     display: block;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 input[type="text"], [type="password"] {
@@ -66,4 +67,16 @@ footer {
     padding: 1rem;
     background: linear-gradient(to top, gray, black);
     box-shadow: 0px -5px 15px black;
+}
+
+#usernameMessage, #zipMessage {
+    color: red;
+    font-weight: bold;
+}
+
+#suggestion {
+    color: yellow;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
