@@ -69,7 +69,7 @@ async function lookupZip() {
             msgEl.textContent = "ZIP code found";
             msgEl.className = "available";
         } else {
-            msgEl.textContent = "No data found for that ZIP code: " + zip;
+            msgEl.textContent = "Zip code not found: " + zip;
             msgEl.className = "unavailable";
         }
 
@@ -152,7 +152,7 @@ async function suggestPassword() {
 // Form validation
 function validateForm(event) {
     event.preventDefault(); // Prevent form submission
-    
+
     let username = document.querySelector("#username").value.trim();
     let password = document.querySelector("#password").value.trim();
     let confirmPassword = document.querySelector("#confirmPassword").value.trim();
