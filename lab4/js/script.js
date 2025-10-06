@@ -110,7 +110,7 @@ async function checkUsername() {
     }
 
     try {
-        let response = await fetch(`https://csumb.space/api/usernameCheckAPI.php?username=${username}`);
+        let response = await fetch(`https://csumb.space/api/usernamesAPI.php?username=${username}`);
         if (!response.ok) throw new Error("Username API cannot be reached");
 
         let data = await response.json();
@@ -141,3 +141,29 @@ function generatePassword(length) {
     }
     return pass;
 }
+
+// Form validation
+function validateForm(event) {
+    // event.preventDefault(); // prevent actual form submission for demo purposes
+
+    let username = document.querySelector("#username").value.trim();
+    let password = document.querySelector("#password").value.trim();
+    let confirmPassword = document.querySelector("#confirmPassword").value.trim();
+
+    if (username.length < 3) {
+        alert("Username must be at least 3 characters");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return;
+    }
+
+        alert("Form submitted successfully!");
+    }
