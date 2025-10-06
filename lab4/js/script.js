@@ -51,7 +51,7 @@ async function lookupZip() {
     lonEl.textContent = "";
     msgEl.textContent = "";
 
-    if (zip.length !== 5 || !zip) {
+    if (zip.length !== 5 || isNaNzip) {
         msgEl.textContent = "ZIP code must be 5 digits";
         msgEl.className = "unavailable";
         return;
