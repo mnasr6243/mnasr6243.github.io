@@ -94,3 +94,34 @@ async function loadCounties() {
         console.error("County error: ", err);
     }
 }
+
+// Check if username is available 
+async function checkUsername() {
+    let username = document.querySelector("#username").value.trim();
+    let msgEL = document.querySelector("#usernameMessage");
+
+    msgEL.textContent = "";
+    msgEL.className = "";
+
+    if (username.length < 3) {
+        msgEL.textContent = "Username must be at least 3 characters";
+        msgEL.classList.add("unavailable");
+        return;
+    }
+
+    try {
+        let response = await fetch(`https://csumb.space/api/usernameCheckAPI.php?username=${username}`);
+        if (!response.ok) throw new Error("Username API cannot be reached");
+
+        let data = await response.json();
+        if (data.available) {
+            msgEL.textContent = "Username is available";
+            msgEL.classList.add("available");
+        } else {
+            msgEL.textContent = "Username is taken";
+            msgEL.classList.add("unavailable");
+        }
+    } catch (err) {
+        console.error("Username check error: ", err);
+    }
+}
