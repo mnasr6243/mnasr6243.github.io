@@ -125,3 +125,19 @@ async function checkUsername() {
         console.error("Username check error: ", err);
     }
 }
+
+// Password suggestion
+function suggestPassword() {
+    let sugestionEL = document.querySelector("#suggestion");
+    let randPass = generatePassword(10);
+    sugestionEL.textContent = `Password Suggestion: ${randPass}`;
+}
+
+function generatePassword(length) {
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+    let pass = "";
+    for (let i = 0; i < length; i++) {
+        pass += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return pass;
+}
